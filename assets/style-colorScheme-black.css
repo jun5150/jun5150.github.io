@@ -1,0 +1,58 @@
+/*******************/
+/*ESQUEMA DE CORES*/
+/*****************/
+/*ESTRUTURA DO SITE E CONFIGURAÇÕES GERAIS: arquivo "style.css"*/
+/*RESPONSIVE (margens, paddings, dimensões dos elmentos (logotipo e ícones de redes sociais) e tamanhos de fontes): arquivo "style-responsive.css"*/
+/*IMPRESSÃO EM PAPEL ou PDF: arquivo "style-print.css"*/
+
+
+
+/********************/
+/*LOGOTIPO 90 GRAUS*/
+.logotype {
+/*	filter: invert(100%);*/
+}
+	.logotype:hover {
+/*		filter: initial;*/
+		filter: invert(100%);
+	}
+
+
+/****************/
+/*REDES SOCIAIS*/
+.instagram:hover,
+.youtube:hover {
+	filter: initial; /*ESQUEMA DE COR (style-colorScheme-.css)*/
+}
+
+
+/********************/
+/*ESTRUTURA DO SITE*/
+main {
+	background-image: url('montanha_preta-C.svg');
+}
+
+
+/*******************/
+/*ESTILOS DE TEXTO*/
+::selection {
+	color: #000;
+	background: var(--red90);
+}
+h1,
+h2,
+p span {
+	color: var(--red90);
+	background-color: black;
+}
+section a {
+	color: var(--red90);
+	text-decoration-color: rgba(170,0,60,0.6);
+}
+	section a:hover {
+		color: #fff;
+		text-decoration-color: rgba(255,255,255,0.6);
+	}
+footer p {
+	color: var(--red90);
+}

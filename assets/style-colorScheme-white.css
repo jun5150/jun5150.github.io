@@ -1,0 +1,60 @@
+/*******************/
+/*ESQUEMA DE CORES*/
+/*****************/
+/*ESTRUTURA DO SITE E CONFIGURAÇÕES GERAIS: arquivo "style.css"*/
+/*RESPONSIVE (margens, paddings, dimensões dos elmentos (logotipo e ícones de redes sociais) e tamanhos de fontes): arquivo "style-responsive.css"*/
+/*IMPRESSÃO EM PAPEL ou PDF: arquivo "style-print.css"*/
+
+
+
+/********************/
+/*LOGOTIPO 90 GRAUS*/
+.logotype:hover {
+	transform: translateY(-3px);
+}
+.logotype {
+	fill: blue;
+}
+
+
+/****************/
+/*REDES SOCIAIS*/
+.instagram,
+.youtube {
+	filter: invert(100%);
+}
+	.instagram:hover,
+	.youtube:hover {
+		opacity: 0.5;
+	}
+
+
+/********************/
+/*ESTRUTURA DO SITE*/
+main {
+	background-image: url('montanha_branca-C.svg');
+}
+
+
+/*******************/
+/*ESTILOS DE TEXTO*/
+::selection {
+	color: var(--red90);
+	background: #fff;
+}
+h1,
+h2,
+p span {
+	color: #fff;
+	background-color: var(--red90);
+}
+section a {
+	color: #fff;
+	text-decoration-color: rgba(255,255,255,0.6);
+}
+	section a:hover {
+		opacity: 0.5;
+	}
+footer p {
+	color: var(--red90);
+}

@@ -1,0 +1,189 @@
+/*******************************************/
+/*ESTRUTURA DO SITE E CONFIGURAÇÕES GERAIS*/
+/*****************************************/
+/*RESPONSIVE (margens, paddings, dimensões dos elmentos (logotipo e ícones de redes sociais) e tamanhos de fontes): arquivo "style-responsive.css"*/
+/*ESQUEMA DE CORES (margens, paddings, dimensões dos elmentos (logotipo e ícones de redes sociais) e tamanhos de fontes): arquivo "style-responsive-.css"*/
+/*IMPRESSÃO EM PAPEL ou PDF: arquivo "style-print.css"*/
+
+
+
+/*FONTE OSWALD @GOOGLE FONTS*/
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
+
+
+/************/
+/*VARIÁVEIS*/
+/*Caso sejam adicionadas novas seções, deve-se adicionar à variável "--fullHeight" 100vh para cada nova seção.
+Caso sejam adicionadas muitas seções, pode ser necessário aumentar a altura da montanha (montanha_branca.svg).*/
+:root {
+	--fullHeight: 700vh;
+	--red90: rgb(170,0,60);
+	--transitionTiming: all 0.4s ease;
+}
+
+
+/***********************/
+/*CONFIGURAÇÕES GERAIS*/
+html {
+	scroll-behavior: smooth;
+}
+body {
+	height: var(--fullHeight);
+	margin: 0;
+	font-family: 'Oswald', sans-serif;
+	font-weight: 600;
+	background-color: var(--red90);
+}
+* {
+	box-sizing: border-box;
+}
+
+
+/********************/
+/*LOGOTIPO 90 GRAUS*/
+.logotype,
+#social,
+footer {
+	right: ; /*RESPONSIVE (style-responsive.css)*/
+}
+.logotype {
+	position: fixed;
+	top: ; /*RESPONSIVE (style-responsive.css)*/
+	right: ; /*RESPONSIVE (style-responsive.css)*/
+	width: ; /*RESPONSIVE (style-responsive.css)*/
+	height: auto;
+	transition: all 0.4s;
+	z-index: 1;
+}
+	.logotype:hover {
+		transform: ; /*ESQUEMA DE COR (style-colorScheme-.css)*/
+		filter: ; /*ESQUEMA DE COR (style-colorScheme-.css)*/
+	}
+.logotypePrint {
+	display: none;
+}
+
+
+/****************/
+/*REDES SOCIAIS*/
+#social {
+	position: fixed;
+	bottom: ; /*RESPONSIVE (style-responsive.css)*/
+	width: ; /*RESPONSIVE (style-responsive.css)*/
+	height: auto;
+/*	transform: translateX(-50%);*/
+	z-index: 1;
+}
+.instagram,
+.youtube {
+	width: 100%;
+	height: auto;
+	filter: invert(100%); /*ESQUEMA DE COR (style-colorScheme-.css)*/
+	transition: var(--transitionTiming);
+}
+.instagram {
+	margin-bottom: ; /*RESPONSIVE (style-responsive.css)*/
+}
+	.instagram:hover,
+	.youtube:hover {
+		opacity: ; /*ESQUEMA DE COR (style-colorScheme-.css)*/
+		filter: ; /*ESQUEMA DE COR (style-colorScheme-.css)*/
+	}
+
+
+/********************/
+/*ESTRUTURA DO SITE*/
+main {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100vw;
+	height: auto;
+	display: flex;
+	flex-direction: column-reverse;
+	background-position: bottom left;
+	background-repeat: no-repeat;
+	background-size: auto var(--fullHeight);
+	background-image: ; /*ESQUEMA DE COR (style-colorScheme-.css)*/
+	z-index: 0;
+}
+section {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	align-items: end;
+	padding: ; /*RESPONSIVE (style-responsive.css)*/
+	transition: var(--transitionTiming);
+}
+#top {
+	align-items: center;
+}
+
+
+/*******************/
+/*ESTILOS DE TEXTO*/
+::selection {
+	color: ; /*ESQUEMA DE COR (style-colorScheme-.css)*/
+	background: ; /*ESQUEMA DE COR (style-colorScheme-.css)*/
+}
+h1,
+h2,
+p span {
+	display: table;
+	font-size: ; /*RESPONSIVE (style-responsive.css)*/
+	text-transform: uppercase;
+	color: ; /*ESQUEMA DE COR (style-colorScheme-.css)*/
+	margin: 0 0 10px 0;
+	padding: 1px 8px;
+	background-color: ; /*ESQUEMA DE COR (style-colorScheme-.css)*/
+	transition: var(--transitionTiming) ease;
+}
+h1 span {
+	font-size: 1.7em; /*responsive (style-responsive.css), dimensão relativa*/
+}
+h2 span {
+	font-size: 1.3em; /*responsive (style-responsive.css), dimensão relativa*/
+}
+p span {
+	display: inline !important;
+	font-size: 1em;
+	box-decoration-break: clone;
+}
+p {
+	line-height: 1.9em; /*responsive (style-responsive.css), dimensão relativa*/
+	margin: 0;
+}
+section a {
+/*	color: #fff;*/
+	color: var(--red90); /*ESQUEMA DE COR (style-colorScheme-.css)*/
+	text-decoration-style: dotted;
+	text-decoration-color: rgba(255,255,255,0.6); /*ESQUEMA DE COR (style-colorScheme-.css)*/
+	text-underline-offset: 3px;
+	text-decoration-thickness: 1px;
+	transition: var(--transitionTiming);
+}
+	section a:hover {
+		opacity: ; /*ESQUEMA DE COR (style-colorScheme-.css)*/
+		color: ; /*ESQUEMA DE COR (style-colorScheme-.css)*/
+	}
+
+
+/*********/
+/*RODAPÉ*/
+footer {
+	position: fixed;
+	bottom: 10px;
+	transition: var(--transitionTiming);
+}
+	footer p {
+		font-size: 0.55em; /*responsive (style-responsive.css), dimensão relativa*/
+		text-transform: uppercase;
+		margin: 0;
+	}
+
+
+/**********************************/
+/*SOMENTE PARA IMPRESSÃO EM PAPEL*/
+#socialPrint {
+	display: none;
+}

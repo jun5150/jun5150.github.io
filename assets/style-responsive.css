@@ -1,0 +1,169 @@
+/********************************************************************************************/
+/*CONFIGURAÇÕES RESPONSIVE (MARGENS, PADDINGS, DIMENSÕES DOS ELMENTOS E TAMANHOS DE FONTES)*/
+/******************************************************************************************/
+/*ESTRUTURA DO SITE E CONFIGURAÇÕES GERAIS: arquivo "style.css"*/
+/*ESQUEMA DE CORES (margens, paddings, dimensões dos elmentos (logotipo e ícones de redes sociais) e tamanhos de fontes): arquivo "style-responsive-.css"*/
+/*IMPRESSÃO EM PAPEL ou PDF: arquivo "style-print.css"*/
+
+
+
+/*TODOS OS ELEMENTOS SÃO DIMENSIONADOS A PARTIR DA LARGURA DO LOGOTIPO, QUE POR SUA VEZ É DEFINIDA COMO 1/8 DA ALTURA DA JANELA DO NAVEGADOR*/
+:root {
+	--logotypeWidth: calc(100vh / 8);
+}
+
+/*[1] MODO PAISAGEM: DESKTOPS, NOTEBOOKS, TABLETS, TVS*/
+@media only screen and (orientation: landscape) and (min-width: 360px) and (max-width: 7860px) {
+	.logotype,
+	#social,
+	footer {
+		right:  calc(var(--logotypeWidth) / 3);
+	}
+	.logotype {
+		top:  calc(var(--logotypeWidth) / 4);
+		width: var(--logotypeWidth);
+		min-width: 100px;
+	}
+	#social {
+		width: calc(var(--logotypeWidth) / 3.5);
+		min-width: 30px;
+		bottom: calc(var(--logotypeWidth) / 1);
+	}
+	.instagram {
+		margin-bottom:  calc(var(--logotypeWidth) / 5);
+	}
+	section {
+		padding: 0 15vw 25vh 15vw;
+	}
+	h1,
+	h2,
+	p,
+	footer {
+		font-size: clamp(20px, calc(var(--logotypeWidth) / 5), 100px);
+	}
+}
+
+/*[2] MODO RETRATO: TABLETS*/
+@media only screen and (orientation: portrait) and (min-width: 481px) and (max-width: 2160px) {
+	.logotype,
+	#social,
+	footer {
+		right:  calc(var(--logotypeWidth) / 5);
+	}
+	.logotype {
+		top:  calc(var(--logotypeWidth) / 6);
+		width: var(--logotypeWidth);
+		min-width: 90px;
+		max-width: calc(100vw / 7);
+	}
+	#social {
+		width: calc(var(--logotypeWidth) / 3.5);
+		min-width: 25px;
+		bottom: calc(var(--logotypeWidth) / 1.2);
+	}
+	.instagram {
+		margin-bottom:  calc(var(--logotypeWidth) / 5);
+	}
+	section {
+		padding: 0 15vw 25vh 15vw;
+	}
+	h1,
+	h2,
+	p,
+	footer {
+		font-size: clamp(16px, calc(var(--logotypeWidth) / 5), 100px);
+	}
+}
+
+/*[3] MODO RETRATO: SMARTPHONES*/
+@media only screen and (orientation: portrait) and (min-width: 360px) and (max-width: 480px) {
+	.logotype,
+	#social,
+	footer {
+		right:  calc(var(--logotypeWidth) / 6);
+	}
+	.logotype {
+		top:  calc(var(--logotypeWidth) / 9);
+		width: var(--logotypeWidth);
+		min-width: 90px;
+		max-width: 110px;
+	}
+	#social {
+		width: calc(var(--logotypeWidth) / 3);
+		min-width: 25px;
+		bottom: calc(var(--logotypeWidth) / 1.4);
+	}
+	.instagram {
+		margin-bottom:  calc(var(--logotypeWidth) / 5);
+	}
+	section {
+		padding: 0 5vw 30vh 8vw;
+	}
+	h1,
+	h2,
+	p,
+	footer {
+		font-size: clamp(16px, calc(var(--logotypeWidth) / 5.8), 100px);
+	}
+}
+
+/*[4] MODO RETRATO: TELAS MUITO PEQUENAS*/
+@media only screen and (orientation: portrait) and (min-width: 0px) and (max-width: 359px) {
+	.logotype,
+	#social,
+	footer {
+		right:  calc(var(--logotypeWidth) / 4.5);
+	}
+	.logotype {
+		top:  calc(var(--logotypeWidth) / 7);
+		width: var(--logotypeWidth);
+		min-width: 90px;
+	}
+	#social {
+		width: calc(var(--logotypeWidth) / 3.5);
+		min-width: 25px;
+		bottom: calc(var(--logotypeWidth) / 1.5);
+	}
+	.instagram {
+		margin-bottom:  calc(var(--logotypeWidth) / 7);
+	}
+	section {
+		padding: 0 10px 25vh 10px;
+	}
+	h1,
+	h2,
+	p,
+	footer {
+		font-size: clamp(16px, calc(var(--logotypeWidth) / 5.8), 100px);
+	}
+}
+	/*[5] MODO RETRATO: TELAS MUITO PEQUENAS*/
+	@media only screen and (orientation: landscape) and (min-height: 0px) and (max-height: 359px) {
+		.logotype,
+		#social,
+		footer {
+			right:  calc(var(--logotypeWidth) / 3);
+		}
+		.logotype {
+			top:  calc(var(--logotypeWidth) / 5);
+			width: var(--logotypeWidth);
+			min-width: 75px;
+		}
+		#social {
+			width: calc(var(--logotypeWidth) / 3.5);
+			min-width: 25px;
+			bottom: calc(var(--logotypeWidth) / 1);
+		}
+		.instagram {
+			margin-bottom:  calc(var(--logotypeWidth) / 5);
+		}
+		section {
+			padding: 0 17vw 25vh 15vw;
+		}
+		h1,
+		h2,
+		p,
+		footer {
+			font-size: clamp(16px, calc(var(--logotypeWidth) / 5.8), 100px);
+		}
+	}
